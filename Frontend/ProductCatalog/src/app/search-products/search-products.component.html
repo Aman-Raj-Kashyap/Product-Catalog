@@ -1,0 +1,36 @@
+<div class="intro" style="height: 100%;">
+  
+    <div class="bg-image"></div>
+      <div class="mask d-flex align-items-center h-100">
+        <div class="container">
+          <form [formGroup]="searchProducts">
+          <p class="h1 mb-4 mb-md-5 text-dark text-uppercase text-center">Search Products</p>
+          <div class="card">
+            <div class="card-body p-4">
+              <div class="row justify-content-center">
+                <div class="col-lg-12 col-xl-10 d-lg-flex flex-row mb-lg-4 mb-xl-0">
+                  
+                  <div id="basic" class="form-outline form-white flex-fill me-lg-2 mb-3 mb-lg-0">
+                    <input type="text" name="pcode" formControlName="productCode" id="form1" class="form-control" placeholder="Product Code" style="font-weight: bold"/>
+                  </div>
+  
+                  <div id="basic" class="form-outline form-white flex-fill me-lg-2 mb-3 mb-lg-0">
+                    <input type="text" name="pname" formControlName="name" id="form2" class="form-control" placeholder="Product Name" style="font-weight: bold"/>
+                  </div>
+                  
+                  <div id="basic" class="form-outline form-white flex-fill me-lg-2 mb-3 mb-lg-0">
+                    <input type="text" name="pbrand" formControlName="brand" id="form3" class="form-control" placeholder="Brand" style="font-weight: bold"/>
+                  </div>
+  
+                </div>
+                <div class="col-lg-12 col-xl-2">
+                  <button type="button" class="btn btn-outline-light btn-lg" (click)="onSearch()" style="padding: 4px 25px 4px 25px;">Search</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+</div>

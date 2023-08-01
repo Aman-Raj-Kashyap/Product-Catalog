@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="backg">
+<a routerLink="/products" style="padding: 10px;">Back</a>
+<div class="container mt-5">
+  
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" style="margin-left: -50px;">
+          <div class="imageDiv">
+            <div class="carousel-item active" style="--background:url({{productData.image}})"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-12" style="font-size: 25px;"><b> {{productData.brand}} </b></div>
+        <h2>{{productData.name}}</h2>
+      </div>
+      <div class="row">
+        <h1><i class="fa fa-inr" aria-hidden="true"></i>{{productData.price}}</h1>
+      </div>
+      <div class="row">
+        <h5 style="padding-top: 30px;"><u>Rating</u></h5>
+        <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="true" id="rating"></ngb-rating>
+        &nbsp; &nbsp;
+        <h4><u>Description</u></h4>
+        <h5>{{productData.description}}</h5>
+      </div>
+      
+      <div class="row mt-4">
+        <h4 class="text-info"><i class="fa fa-map-marker" aria-hidden="true">&nbsp;<span>Deliver to</span></i></h4>
+        <div>
+          <input type="text" placeholder="Search.." name="search2" id="pincode" style="border-radius: 3px;">
+          <button type="submit" (click)="checkPincode()"><i class="fa fa-search" ></i></button>
+        </div>
+        <!-- <p *ngIf="expectedDate!='Not deliverable'">&nbsp; Available in {{productData.expected_delivery}} days</p> -->
+        <p style="font-size: 16px;margin-top: 10px;font-family:'Trebuchet MS';padding-left: 2px;"> &nbsp; {{expectedDate}}  &nbsp;  </p>
+      </div>
+      
+      <div style="display: flow-root;columns: 2;">
+        <div class="row mt-4">
+          <h4>Size: &nbsp; &nbsp;</h4>
+          <h5>{{productData.size}}</h5>
+        </div>
+
+        <div class="row mt-4">
+          <h4 style="margin-top: 26px;">Colors: &nbsp; &nbsp; </h4>
+          <h5>{{productData.color}}</h5>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+	
+	
+
+	
